@@ -1,0 +1,15 @@
+<div class="col-lg-4">
+  <div class="card" *ngIf="currentWeather" >
+    <h3 class="card-header">{{ currentWeather.cityName | myEllipsis:5 }} </h3>
+    <div class="card-block">
+      <img height="50" width="50" alt="Weather API Day Thunderstorm with light rain"
+      [src]="getImageWeather(currentWeather.weather.icon)" />
+      <h4 class="card-title" myHighlight>{{ currentWeather.temp }} °C</h4>
+      <p class="card-text">{{ currentWeather.weather.description}}</p>
+      <p>{{ currentWeather.date}}</p>
+      <a href="#" class="btn btn-primary">Go</a>
+    </div>
+  </div>
+</div>
+<h1>History</h1>
+<app-history *ngIf="currentWeather" [lat]="currentWeather.lat" [lng]="currentWeather.lng"></app-history>
