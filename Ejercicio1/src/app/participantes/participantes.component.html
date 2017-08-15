@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <div class="row">
+<table class="col-md-6 table table-responsive table-bordered" *ngFor="let equipo of equipos">
+  <thead>
+  <tr>
+    <th colspan="2">{{ equipo.name }}</th>
+
+  </tr>
+  <tr>
+    <th>N°</th>
+    <th>Nombre</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jugador of equipo.jugadores | sortBy: 'player_name'; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ jugador.player_name }}</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>

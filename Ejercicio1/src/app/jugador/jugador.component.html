@@ -1,0 +1,47 @@
+<button class="btn btn-info" (click)="open(jugadorModal, false, null)">Nuevo Jugador <i class="fa fa-user"></i></button>
+<table class="table table-responsive table-bordered">
+  <thead>
+  <tr>
+    <th>N°</th>
+    <th>Nombre</th>
+    <th>[]</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jugador of jugadores; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ jugador.player_name }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="delete(jugador.id)"><i class="fa fa-trash"></i></button>
+        &nbsp;
+        <button class="btn btn-info btn-sm" (click)="open(jugadorModal, true, jugador)"><i class="fa fa-pencil"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Modal -->
+<ng-template #jugadorModal let-c="close" let-d="dismiss">
+  <form class="form-horizontal">
+    <div class="modal-header">
+      <h4 class="modal-title">Nuevo Jugador</h4>
+      <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group row">
+        <label class="col-3 col-form-label">Nombre</label>
+        <div class="col-9">
+          <input class="form-control" type="text" [(ngModel)]="jugador.player_name" name="player_name">
+        </div>
+      </div>
+      <div class="alert alert-danger" *ngIf="message">
+        {{message}}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="post(jugador)">{{ (edit == true)?'Modificar':'Crear' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="close()">Cerrar</button>
+    </div>
+  </form>
+</ng-template>
