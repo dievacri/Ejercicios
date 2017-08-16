@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 /* Components */
 import { BooksComponent } from './books/books.component';
 import { HistoryComponent } from './history/history.component';
+import { FocusComponent } from './focus/focus.component';
 
 /*Services*/
 import { WeatherService } from './home/home.service';
@@ -17,9 +18,11 @@ import { HistoryService } from './history/history.service';
 
 /*Directives*/
 import { HighlightDirective} from './_Directives/highlight.directive';
+import { CustomCurrencyDirective} from './_Directives/customCurrency.directive';
 
 /*Pipes*/
 import { EllipsisPipe} from './_Pipes/ellipsis,pipe';
+import { CustomCurrencyPipe } from './_Pipes/customCurrency.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { EllipsisPipe} from './_Pipes/ellipsis,pipe';
     BooksComponent,
     HistoryComponent,
     HighlightDirective,
-    EllipsisPipe
+    EllipsisPipe,
+    CustomCurrencyPipe,
+    CustomCurrencyDirective,
+    FocusComponent
 ],
   imports: [
     BrowserModule,
@@ -36,7 +42,7 @@ import { EllipsisPipe} from './_Pipes/ellipsis,pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [WeatherService, HistoryService],
+  providers: [WeatherService, HistoryService, CustomCurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

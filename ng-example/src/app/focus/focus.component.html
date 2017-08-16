@@ -1,0 +1,8 @@
+<div class="col-lg-6">
+  <div class="card">
+    <h2 class="card-header">Your balance is: {{ inputNumber | customCurrency: '$' }}</h2>
+    <div class="card-block">
+      <input type="text" class="form-control" [(ngModel)]="inputNumber" customCurrency>
+    </div>
+  </div>
+</div>
