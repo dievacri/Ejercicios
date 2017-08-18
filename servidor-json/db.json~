@@ -1,0 +1,109 @@
+{
+  "equipo": [
+    {
+      "id": 1,
+      "name": "Team A"
+    },
+    {
+      "id": 2,
+      "name": "Team B"
+    }
+  ],
+  "jugador": [
+    {
+      "id": 2,
+      "player_name": "Lionel Messi",
+      "id_equipo": 2
+    },
+    {
+      "id": 5,
+      "player_name": "Diego Vasquez",
+      "id_equipo": "2"
+    },
+    {
+      "id": 7,
+      "player_name": "Juan",
+      "id_equipo": "2"
+    },
+    {
+      "id": 10,
+      "player_name": "Jugador 3",
+      "id_equipo": 1
+    },
+    {
+      "id": 11,
+      "player_name": "Prueba",
+      "id_equipo": 2
+    },
+    {
+      "id": 12,
+      "player_name": "Prueba",
+      "id_equipo": 1
+    },
+    {
+      "id": 13,
+      "player_name": "Prueba",
+      "id_equipo": 1
+    },
+    {
+      "id": 14,
+      "player_name": "Jugador 8",
+      "id_equipo": 1
+    },
+    {
+      "id": 15,
+      "player_name": "Jugador 9",
+      "id_equipo": 1
+    },
+    {
+      "id": 16,
+      "player_name": "Jugador 10",
+      "id_equipo": 1
+    },
+    {
+      "id": 18,
+      "player_name": "Jugador 7",
+      "id_equipo": 2
+    },
+    {
+      "id": 19,
+      "player_name": "Jugador 8",
+      "id_equipo": 2
+    },
+    {
+      "id": 20,
+      "player_name": "Jugador 9",
+      "id_equipo": 2
+    },
+    {
+      "id": 21,
+      "player_name": "Jugador 10",
+      "id_equipo": 2
+    },
+    {
+      "id": 22,
+      "player_name": "Jugador 11",
+      "id_equipo": 1
+    },
+    {
+      "id": 23,
+      "player_name": "Xavi",
+      "id_equipo": 2
+    },
+    {
+      "id": 24,
+      "player_name": "Jugador 11",
+      "id_equipo": 2
+    },
+    {
+      "id": 25,
+      "player_name": "Angular",
+      "id_equipo": 2
+    },
+    {
+      "id": 26,
+      "player_name": "Jugador 2",
+      "id_equipo": 1
+    }
+  ]
+}
