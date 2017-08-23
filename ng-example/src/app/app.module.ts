@@ -28,6 +28,8 @@ import { EllipsisPipe} from './_Pipes/ellipsis,pipe';
 import { CustomCurrencyPipe } from './_Pipes/customCurrency.pipe';
 import { LoginComponent } from './login/login.component';
 import {LoginService} from "./login/login.service";
+import { BooksManagerComponent } from './books-manager/books-manager.component';
+import { BooksFiltersComponent } from './books-filters/books-filters.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import {LoginService} from "./login/login.service";
     CustomCurrencyDirective,
     FocusComponent,
     LoginComponent,
-    RouteComponent
+    RouteComponent,
+    BooksManagerComponent,
+    BooksFiltersComponent
 ],
   imports: [
     BrowserModule,

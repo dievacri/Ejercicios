@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {IEquipo} from '../models/IEquipo';
+import {AppService} from "../app.service";
 
 @Component({
   selector: 'app-participantes',
@@ -8,10 +9,18 @@ import {IEquipo} from '../models/IEquipo';
 })
 export class ParticipantesComponent implements OnInit {
 
-  @Input() equipos: IEquipo[];
+  equipos: IEquipo[];
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getAll();
+  }
+
+  getAll() {
+    this.appService.getEquipos().subscribe((res) => {
+      this.equipos = res;
+    });
+  }
 
 }

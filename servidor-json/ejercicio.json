@@ -1,10 +1,39 @@
 {
-	"equipo": [
-		{"id": 1, "name": "Team A"},
-		{"id": 2, "name": "Team B"}
-	],
-	"jugador": [
-		{"id":1, "player_name": "Jugador 1", "id_equipo": 1},
-		{"id":2, "player_name": "Jugador 2", "id_equipo": 2}	
-	]
+  "equipo": [
+    {
+      "id": 1,
+      "name": "Team A"
+    },
+    {
+      "id": 2,
+      "name": "Team B"
+    }
+  ],
+  "jugador": [
+    {
+      "id": 1,
+      "player_name": "Jugador 1",
+      "id_equipo": 1
+    },
+    {
+      "id": 2,
+      "player_name": "Jugador 2",
+      "id_equipo": 2
+    },
+    {
+      "id": 3,
+      "player_name": "Jugador 2",
+      "id_equipo": 1
+    },
+    {
+      "id": 4,
+      "player_name": "Jugador 3",
+      "id_equipo": 2
+    },
+    {
+      "id": 5,
+      "player_name": "Jugador 1",
+      "id_equipo": 2
+    }
+  ]
 }

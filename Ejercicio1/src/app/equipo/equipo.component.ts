@@ -22,5 +22,6 @@ export class EquipoComponent implements OnInit {
 
   getJugadores(jugadores: IJugador[], equipo: IEquipo) {
     equipo.jugadores = jugadores;
+    this.appService.avisa(this.equipos);
   }
 }
