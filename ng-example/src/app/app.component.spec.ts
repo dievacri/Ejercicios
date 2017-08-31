@@ -4,13 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
+import {EmitterService} from "./shared/emitter.service";
 
 describe('AppComponent', () => {
+  let EmitterMock = {};
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, FormsModule],
       declarations: [
         AppComponent
+      ],
+      providers: [
+        {provide: EmitterService, useValue: EmitterMock}
       ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();

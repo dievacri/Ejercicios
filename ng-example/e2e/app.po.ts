@@ -8,4 +8,8 @@ export class NgCourseDemoPage {
   getParagraphText() {
     return element(by.css('app-root a.navbar-brand')).getText();
   }
+
+  getHeader() {
+    return element(by.css('app-root header'));
+  }
 }

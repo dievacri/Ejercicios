@@ -1,0 +1,63 @@
+<div class="books">
+  <button type="button" class="btn btn-success" (click)="showForm = true; isNew = true;"><i class="fa fa-plus"></i>Nuevo</button>
+</div>
+<div class="col-lg-8" [hidden]="!showForm">
+  <form novalidate (ngSubmit)="onSubmit(book)" [formGroup]="book">
+    <input type="hidden" formControlName="id">
+    <div class="form-group">
+      <label>
+        <span>Title</span>
+      </label>
+      <input type="text" placeholder="Title" formControlName="title">
+      <div class="error" *ngIf="book.get('title').touched && book.get('title').hasError('required')">
+        Title is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Author</span>
+      </label>
+      <input type="text" placeholder="Author" formControlName="author">
+      <div class="error" *ngIf="book.get('author').touched && book.get('author').hasError('required')">
+        Author is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Year Published</span>
+      </label>
+      <input type="text" placeholder="Year Published" formControlName="year_published">
+      <div class="error" *ngIf="book.get('year_published').touched && book.get('year_published').hasError('required')">
+        Year Published is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Rating</span>
+      </label>
+      <input type="text" placeholder="Rating" formControlName="rating">
+      <div class="error" *ngIf="book.get('rating').touched && book.get('rating').hasError('required')">
+        Rating is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Price</span>
+      </label>
+      <input type="text" placeholder="Price" formControlName="price">
+      <div class="error" *ngIf="book.get('price').touched && book.get('price').hasError('required')">
+        Price is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Image Url</span>
+      </label>
+      <input type="text" placeholder="Image Url" formControlName="imgUrl">
+      <div class="error" *ngIf="book.get('imgUrl').touched && book.get('imgUrl').hasError('required')">
+        Image Url is required
+      </div>
+    </div>
+    <button type="submit" [disabled]="book.invalid" class="btn btn-primary">{{(isNew === true)?'Crear':'Modificar'}}</button>
+  </form>
+</div>

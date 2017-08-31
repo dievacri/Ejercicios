@@ -1,11 +1,11 @@
 <form class="col-lg-4 text-center">
   <h2 class="form-signin-heading">Iniciar Sesion</h2>
   <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" name="username" class="form-control" placeholder="Username"autofocus="" [(ngModel)]="user.username">
+  <input id="inputEmail" type="email" name="username" class="form-control" placeholder="Username"autofocus="" [(ngModel)]="user.username">
   <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password">
-  <button class="btn btn-lg btn-primary btn-block" type="button" (click)="login(user)">Iniciar Sesion</button>
-  <div class="alert alert-danger" [hidden]="!message">
+  <input id="inputPassword" type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password">
+  <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="button" (click)="login(user)">Iniciar Sesion</button>
+  <div id="errorMessage" class="alert alert-danger" [hidden]="!message">
     {{ message }}
   </div>
 </form>

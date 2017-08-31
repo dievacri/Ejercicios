@@ -11,4 +11,9 @@ describe('ng-course-demo App', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Angular Course');
   });
+
+  it('should have header', () => {
+    page.navigateTo();
+    expect(page.getHeader().isPresent()).toEqual(true);
+  });
 });

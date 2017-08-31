@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -30,6 +30,9 @@ import { LoginComponent } from './login/login.component';
 import {LoginService} from "./login/login.service";
 import { BooksManagerComponent } from './books-manager/books-manager.component';
 import { BooksFiltersComponent } from './books-filters/books-filters.component';
+import {EmitterService} from "./shared/emitter.service";
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { RegisterBookComponent } from './register-book/register-book.component';
 
 
 @NgModule({
@@ -46,15 +49,18 @@ import { BooksFiltersComponent } from './books-filters/books-filters.component';
     LoginComponent,
     RouteComponent,
     BooksManagerComponent,
-    BooksFiltersComponent
+    BooksFiltersComponent,
+    RegisterUserComponent,
+    RegisterBookComponent
 ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
-  providers: [WeatherService, HistoryService, CustomCurrencyPipe, CanActivateAuthGuard, UserProfileService, LoginService],
+  providers: [WeatherService, HistoryService, CustomCurrencyPipe, CanActivateAuthGuard, UserProfileService, LoginService, EmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

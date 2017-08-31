@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component'
 import {CanActivateAuthGuard} from './shared/can-activate.service';
 import { RouteComponent } from './shared/route.component';
 import {BooksManagerComponent} from "./books-manager/books-manager.component";
+import {RegisterUserComponent} from "./register-user/register-user.component";
 
 const routes: Routes = [
     {
@@ -27,12 +28,16 @@ const routes: Routes = [
     //   canActivateChild: [CanActivateAuthGuard],
     //   children: [{
     //     path: '',
-    //     component: BooksComponent
+    //     component: BooksManagerComponent
     //   }]
     // },
     {
       path: 'login',
       component: LoginComponent
+    },
+    {
+      path: 'register',
+      component: RegisterUserComponent
     },
     { path: '**', redirectTo: 'not-found' }
 ];

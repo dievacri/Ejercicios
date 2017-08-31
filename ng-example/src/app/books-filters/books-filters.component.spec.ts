@@ -1,14 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BooksFiltersComponent } from './books-filters.component';
+import {FormsModule} from "@angular/forms";
+import {Http} from "@angular/http";
+import {BooksFiltersService} from "./books-filters.service";
 
-describe('BooksFiltersComponent', () => {
+fdescribe('BooksFiltersComponent', () => {
   let component: BooksFiltersComponent;
   let fixture: ComponentFixture<BooksFiltersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BooksFiltersComponent ]
+      imports: [FormsModule],
+      declarations: [ BooksFiltersComponent ],
+      providers: [
+        BooksFiltersService
+      ]
     })
     .compileComponents();
   }));
